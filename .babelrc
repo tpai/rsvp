@@ -1,0 +1,15 @@
+{
+  'presets': [
+    ['env', {
+      'targets': {
+        'browsers': ['> 1%']
+      },
+      'modules': false
+    }],
+    'react',
+    'stage-0'
+  ],
+  'plugins': [
+    'syntax-dynamic-import'
+  ],
+}

@@ -1,0 +1,120 @@
+.button {
+  background: transparent;
+  outline: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.regular {
+  border-radius: 100px;
+  padding: 5px 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon > svg {
+  display: block;
+}
+
+.primary {
+  @extend .regular;
+  color: #fff;
+  border: 1px solid #fff;
+  background: #697851;
+
+  svg > path {
+    fill: #fff;
+  }
+
+  &:hover {
+    background: #83926B;
+  }
+
+  &:active {
+    background: #505F38;
+  }
+
+  &:disabled {
+    background: #dbdbdb;
+    cursor: not-allowed;
+  }
+}
+
+.primary-reverse {
+  @extend .regular;
+  color: #697851;
+  border: 1px solid #697851;
+  background: transparent;
+
+  &:hover {
+    color: #83926B;
+    border-color: #83926B;
+  }
+
+  &:active {
+    color: #505F38;
+    border-color: #505F38;
+  }
+
+  &:disabled {
+    color: #dbdbdb;
+    border-color: #dbdbdb;
+    cursor: not-allowed;
+    svg > path {
+      fill: #dbdbdb;
+    }
+  }
+}
+
+.secondary-reverse {
+  @extend .regular;
+  color: #e9f0ed;
+  border: 1px solid #e9f0ed;
+  background: transparent;
+
+  svg > path {
+    fill: #e9f0ed;
+  }
+
+  &:hover {
+    color: #d5f5e6;
+    border-color: #d5f5e6;
+  }
+
+  &:active {
+    color: #9ef3cd;
+    border-color: #9ef3cd;
+  }
+
+  &:disabled {
+    color: #949494;
+    border-color: #949494;
+    cursor: not-allowed;
+    svg > path {
+      fill: #949494;
+    }
+  }
+}
+
+.icon-left, .icon-right {
+  width: 107px;
+  height: 28px;
+}
+
+.icon, .icon-left, .icon-right {
+  > .wrapper {
+    justify-content: space-between;
+  }
+}
+
+.round-arrow-right {
+  width: 28px;
+  height: 28px;
+}

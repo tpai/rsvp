@@ -1,0 +1,17 @@
+$laptop-width: 375px;
+$laptop-height: 667px;
+
+// Breakpoint map
+$breakpoint: (
+  mb_S_Max: 320px, // mobile S max width
+  mb_M_Min: 321px, // mobile M min width
+  mb_M_Max: 375px, // mobile M max width
+  mb_L_Min: 376px, // mobile L min width
+  mb_L_Max: 425px, // mobile L max width
+  tb_Min: 426px, // tablet min width
+  tb_Max: 768px, // tablet max width
+  lt_Min: 769px, // laptop min width
+  lt_Max: 1024px, // laptop max width
+  lt_L_Min: 1025px, // laptop L min width
+  lt_L_Max: 1440px, // laptop L max width
+);

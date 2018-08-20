@@ -1,0 +1,31 @@
+@import '~stylesheets/base';
+
+.default {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  background: #545d4a url('images/bg-leaf.png') repeat center center;
+
+  @include rwd(laptop) {
+    border-radius: 5px;
+    width: $laptop-width;
+    height: $laptop-height;
+  }
+
+  @include rwd(mobile) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.description {
+  @extend %general-description;
+  color: #b7cdc1;
+  width: 100%;
+  text-align: left;
+}

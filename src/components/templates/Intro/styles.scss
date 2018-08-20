@@ -1,0 +1,28 @@
+@import '~stylesheets/base';
+
+.default {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  background: #e9f0ed;
+
+  @include rwd(laptop) {
+    border-radius: 5px;
+    width: $laptop-width;
+    height: $laptop-height;
+  }
+
+  @include rwd(mobile) {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+
+.description {
+  @extend %general-description;
+}

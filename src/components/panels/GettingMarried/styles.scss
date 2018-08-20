@@ -1,0 +1,22 @@
+.default {
+  width: 100%;
+}
+
+.us {
+  width: 100%;
+  max-width: 326px;
+}
+
+.getting-married {
+  width: 100%;
+  max-width: 318px;
+  margin: -15px auto;
+}
+
+.text {
+  text-align: center;
+
+  &:first-of-type {
+    margin: 45px 0 0 0;
+  }
+}

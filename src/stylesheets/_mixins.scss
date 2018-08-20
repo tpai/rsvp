@@ -1,0 +1,18 @@
+@mixin rwd($range) {
+  @if $range==mobile {
+    @media (max-width: map-get($breakpoint, mb_S_Max)) { @content; }
+    @media (min-width: map-get($breakpoint, mb_M_Min)) and (max-width: map-get($breakpoint, mb_M_Max)) { @content; }
+    @media (min-width: map-get($breakpoint, mb_L_Min)) and (max-width: map-get($breakpoint, mb_L_Max)) { @content; }
+  }
+  @else if $range==tablet {
+    @media (min-width: map-get($breakpoint, tb_Min)) and (max-width: map-get($breakpoint, tb_Max)) { @content; }
+  }
+  @else if $range==both {
+    @include rwd(mobile) { @content; };
+    @include rwd(tablet) { @content; };
+  }
+  @else {
+    @media (min-width : map-get($breakpoint, lt_Min)) and (min-width : map-get($breakpoint, lt_Max)) { @content; }
+    @media (min-width : map-get($breakpoint, lt_L_Min)) and (min-width : map-get($breakpoint, lt_L_Max)) { @content; }
+  }
+}

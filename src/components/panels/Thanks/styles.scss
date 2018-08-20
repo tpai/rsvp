@@ -1,0 +1,37 @@
+.default {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logo > svg {
+  width: 110px;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  width: calc(100% - 30px);
+  border-radius: 3px;
+  color: #697851;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 50px 0 24px 0;
+}
+
+.signs {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 55%;
+  margin: 22px 0 0 0;
+}
+
+.sign {
+  width: 84px;
+}
