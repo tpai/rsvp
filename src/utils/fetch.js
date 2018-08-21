@@ -6,13 +6,12 @@ const myFetch = async (url, options = {}) => {
       'content-type': 'application/json',
       ...options.headers,
     },
-    credentials: 'include',
     method:      options.method || 'GET',
     body:        JSON.stringify(options.body),
   };
   const response = await fetch(url, newOptions);
   if (response.status >= 500) throw new Error(response);
-  const body   = await response.json();
+  const body   = await response.text();
   const result = {
     body,
     status:     response.status,
