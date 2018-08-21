@@ -1,9 +1,9 @@
-require('dotenv').config();
-
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const DotenvPlugin = require('dotenv-webpack');
 
+const paths = require('./webpack.paths.js');
 const config = require('./webpack.config.js');
 
 module.exports = Object.assign({}, config, {
@@ -24,12 +24,8 @@ module.exports = Object.assign({}, config, {
       template: path.resolve(__dirname, 'index.html'),
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        RECAPTCHA_SITEKEY: JSON.stringify(process.env.RECAPTCHA_SITEKEY),
-        API_KEY: JSON.stringify(process.env.API_KEY),
-        API_ENDPOINT: JSON.stringify(process.env.API_ENDPOINT),
-      },
+    new DotenvPlugin({
+      path: path.resolve(paths.root, `.env.${process.env.NODE_ENV}`),
     }),
   ],
 });

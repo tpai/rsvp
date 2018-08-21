@@ -46,6 +46,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.11",
     "dotenv": "^6.0.0",
+    "dotenv-webpack": "^1.5.7",
     "eslint": "^5.0.0",
     "eslint-plugin-react": "^7.4.0",
     "file-loader": "^1.1.11",
