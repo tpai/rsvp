@@ -2,6 +2,7 @@ const myFetch = async (url, options = {}) => {
   const newOptions = {
     ...options,
     headers: {
+      'x-api-key': process.env.API_KEY,
       'content-type': 'application/json',
       ...options.headers,
     },
