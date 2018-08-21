@@ -76,7 +76,13 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g)$/i,
         use: [
-          'file-loader',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name]-[hash:6].[ext]',
+              outputPath: process.env.NODE_ENV === 'production' ? '/static/images/' : '',
+            },
+          },
           {
             loader: 'image-webpack-loader',
             options: {
