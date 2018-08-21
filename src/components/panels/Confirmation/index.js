@@ -9,6 +9,7 @@ import styles from './styles.scss';
 
 class Confirmation extends PureComponent {
   static propTypes = {
+    uiState: PropTypes.oneOf(['idle', 'loading', 'failed']),
     rsvp: PropTypes.shape({
       name: PropTypes.string,
       nickname: PropTypes.string,
@@ -27,6 +28,7 @@ class Confirmation extends PureComponent {
     clickModify: PropTypes.func,
   }
   static defaultProps = {
+    uiState: 'idle',
     rsvp: {
       name: '',
       nickname: '',
@@ -83,7 +85,7 @@ class Confirmation extends PureComponent {
   }
   render() {
     const { isVerified, response } = this.state;
-    const { clickSend, clickModify } = this.props;
+    const { uiState, clickSend, clickModify } = this.props;
     const labels = {
       name: '姓名',
       nickname: '暱稱',
@@ -109,7 +111,7 @@ class Confirmation extends PureComponent {
               iconType="arrow-right"
               className={styles['submit']}
               handleClick={() => clickSend(response)}
-              disabled={!isVerified}
+              disabled={!isVerified || uiState === 'loading'}
             >
               送出
             </Button>
