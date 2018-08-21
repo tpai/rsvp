@@ -1,5 +1,5 @@
 {
-  "name": "redux-saga-starter-kit",
+  "name": "rsvp",
   "version": "1.0.0",
   "engines": {
     "node": "^8.9.4"
