@@ -94,6 +94,7 @@ class Confirmation extends PureComponent {
       address: '地址',
       companies: '攜伴',
     };
+    const isLoading = uiState === 'loading';
     return (
       <Dark
         buttonGroup={(
@@ -102,6 +103,7 @@ class Confirmation extends PureComponent {
               key="modify"
               styleTypes={["secondary-reverse"]}
               handleClick={clickModify}
+              disabled={isLoading}
             >
               修改
             </Button>
@@ -111,7 +113,7 @@ class Confirmation extends PureComponent {
               iconType="arrow-right"
               className={styles['submit']}
               handleClick={() => clickSend(response)}
-              disabled={!isVerified || uiState === 'loading'}
+              disabled={!isVerified || isLoading}
             >
               送出
             </Button>
