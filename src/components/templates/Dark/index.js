@@ -7,6 +7,7 @@ import styles from './styles.scss';
 
 class Dark extends PureComponent {
   static propTypes = {
+    disableSpace: PropTypes.bool,
     // multiple custom buttons
     buttonGroup: PropTypes.any,
 
@@ -15,6 +16,7 @@ class Dark extends PureComponent {
     children: PropTypes.any,
   }
   static defaultProps = {
+    disableSpace: false,
     // multiple buttons
     buttons: null,
 
@@ -24,12 +26,14 @@ class Dark extends PureComponent {
   }
   render () {
     const {
+      disableSpace,
       buttonGroup,
       onClick,
       children,
     } = this.props;
     return (
       <div className={cx(styles['default'], 'transition-item')}>
+        {!disableSpace && <div className={styles['space']}>&nbsp;</div>}
         <div className={styles['description']}>
           {children}
         </div>
