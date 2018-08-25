@@ -16,5 +16,44 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
+
+  .transition-wrapper {
+    @include rwd(laptop) {
+      position: relative;
+      width: $laptop-width;
+      height: $laptop-height;
+    }
+
+    @include rwd(mobile) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .transition-item {
+    position: absolute;
+    transition: transform 0.3s, opacity 0.3s;
+
+    &.transition-appear {
+      opacity: 0;
+      transform: translate3d(30%, 0, 0);
+    }
+
+    &.transition-appear.transition-appear-active {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    &.transition-leave {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.transition-leave.transition-leave-active {
+      opacity: 0;
+      transform: translate3d(-30%, 0, 0);
+    }
   }
 }

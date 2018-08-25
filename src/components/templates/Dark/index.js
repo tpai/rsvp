@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 import Button from 'components/elements/Button';
 import styles from './styles.scss';
@@ -28,7 +29,7 @@ class Dark extends PureComponent {
       children,
     } = this.props;
     return (
-      <div className={styles['default']}>
+      <div className={cx(styles['default'], 'transition-item')}>
         <div className={styles['description']}>
           {children}
         </div>
