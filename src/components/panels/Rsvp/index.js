@@ -105,13 +105,6 @@ class Rsvp extends PureComponent {
                 </div>
                 <p className={styles['list-item']}>
                   4. 請填寫收件地址*
-                </p>
-                <div className={styles['field']}>
-                  <Input
-                    name="address"
-                    type="text"
-                    placeholder="別忘了填寫郵遞區號"
-                  />
                   <a
                     href="https://www.post.gov.tw/post/internet/SearchZone/index.jsp?ID=130107"
                     target="_blank"
@@ -120,6 +113,13 @@ class Rsvp extends PureComponent {
                   >
                     郵遞區號查詢連結
                   </a>
+                </p>
+                <div className={styles['field']}>
+                  <Input
+                    name="address"
+                    type="text"
+                    placeholder="別忘了填寫郵遞區號"
+                  />
                 </div>
                 <div className={styles['next']}>
                   <Button
