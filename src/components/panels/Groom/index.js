@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import Intro from 'components/templates/Intro';
-import logo from 'images/logo-green.svg';
+import groom from 'images/groom-avatar.png';
 import styles from './styles.scss';
 
 class Groom extends PureComponent {
@@ -18,15 +18,19 @@ class Groom extends PureComponent {
   render () {
     return (
       <Intro onClick={this.handleClick}>
-        <div>
-          <div className={styles['avatar']} dangerouslySetInnerHTML={{__html: logo}} />
-          <div className={styles['description']}>
-            <p>宅宅工程師</p>
-            <p>好人天然呆</p>
-            <p>重要的事情常常忘記，</p>
-            <p>掉了手機錢包是家常便飯，</p>
-            <p>但電影、遊戲和漫畫的細節倒是記得一清二楚。</p>
-          </div>
+        <div className={styles['default']}>
+          <img src={groom} className={styles['avatar']} />
+          <pre
+            className={styles['description']}
+            dangerouslySetInnerHTML={{__html:
+`宅宅工程師
+雲林西螺人
+喜歡追逐技術掉進坑的開發者
+愛家戀家的巨蟹座
+朋友形容是好人天然呆
+腦袋裡裝滿電影動漫的各種小細節
+小時玩遊戲 創業寫遊戲 現在囤遊戲`}}
+          />
         </div>
       </Intro>
     );
