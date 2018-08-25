@@ -13,7 +13,11 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     onSubmit: values => {
-      const companies = values.companies.filter(company => !!company);
+      const companies = values.companies.filter(company => {
+        return company &&
+          company.name &&
+          company.name.trim() !== '';
+      });
       return clickPreview({ companies });
     },
   }, dispatch);
