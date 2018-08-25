@@ -18,17 +18,20 @@ class Groom extends PureComponent {
   render () {
     return (
       <Intro onClick={this.handleClick}>
-        <div>
+        <div className={styles['default']}>
           <div className={styles['avatar']} dangerouslySetInnerHTML={{__html: logo}} />
-          <div className={styles['description']}>
-            <p>1001010000100000  工程師的語言</p>
-            <p>Handwritten Font  設計師的浪漫</p>
-            <p>&nbsp;</p>
-            <p>2015 . 10 . 01  我們在前公司相識</p>
-            <p>2018 . 10 . 01  決定攜手共度一生</p>
-            <p>&nbsp;</p>
-            <p>1001 Milestone</p>
-          </div>
+          <pre
+            className={styles['description']}
+            dangerouslySetInnerHTML={{__html:
+`100110011001100  工程師的語言
+Handwritten Font  設計師的浪漫
+
+2015 . 10 . 01  我們在前公司相識
+2018 . 10 . 01  決定攜手共度一生
+
+龍與虎的展覽
+1001 Milestone`}}
+          />
         </div>
       </Intro>
     );
