@@ -8,7 +8,6 @@ import Button from 'components/elements/Button';
 import Input from 'components/elements/Input';
 import FormTemplate from 'components/templates/Form';
 import styles from './styles.scss';
-import validate from './validate';
 
 class RsvpCompany extends PureComponent {
   static propTypes = {
@@ -45,7 +44,6 @@ class RsvpCompany extends PureComponent {
           mutators={{
             ...arrayMutators
           }}
-          validate={validate}
           render={({
             handleSubmit,
             form: { mutators: { push } },
