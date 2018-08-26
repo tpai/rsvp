@@ -4,7 +4,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 import Button from 'components/elements/Button';
 import Dark from 'components/templates/Dark';
-import logo from 'images/logo-gold.svg';
+import logo from 'images/logo-gold.png';
 import styles from './styles.scss';
 
 class Confirmation extends PureComponent {
@@ -121,7 +121,7 @@ class Confirmation extends PureComponent {
         )}
       >
         <div className={styles['default']}>
-          <div className={styles['logo']} dangerouslySetInnerHTML={{__html: logo}} />
+          <img src={logo} className={styles['logo']} />
           <div className={styles['content']}>
             {Object.keys(labels).map(label => {
               return (

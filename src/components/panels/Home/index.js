@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import Dark from 'components/templates/Dark';
-import logo from 'images/logo-gold.svg';
+import logo from 'images/logo-gold.png';
 import styles from './styles.scss';
 
 class Home extends PureComponent {
@@ -18,7 +18,7 @@ class Home extends PureComponent {
   render() {
     return (
       <Dark onClick={this.handleClickNext}>
-        <div className={styles['logo']} dangerouslySetInnerHTML={{__html: logo}} />
+        <img src={logo} className={styles['logo']} />
         <p className={styles['text']}>虎與龍的展覽</p>
       </Dark>
     );
