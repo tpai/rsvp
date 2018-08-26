@@ -8,6 +8,7 @@ import PageTransition from 'react-router-page-transition';
 import history from 'store/history';
 import store from 'store';
 import 'stylesheets';
+import LoadingMask from 'components/elements/LoadingMask';
 import Home from 'containers/panels/Home';
 import GettingMarried from 'containers/panels/GettingMarried';
 import Speech from 'containers/panels/Speech';
@@ -26,6 +27,7 @@ render(
       <Route
         render={({ location }) => (
           <div className="mobile-wrapper">
+            <LoadingMask />
             <PageTransition timeout={300}>
               <Switch location={location}>
                 <Route exact path="/" component={Home} />

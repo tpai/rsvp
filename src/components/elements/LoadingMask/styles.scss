@@ -1,0 +1,30 @@
+.default {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  background: #b7cdc1;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.text {
+  color: #545d4a;
+  font-family: "EB Garamond";
+}
+
+.preload {
+  display: none;
+}
