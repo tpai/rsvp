@@ -16,3 +16,20 @@
     @media (min-width : map-get($breakpoint, lt_L_Min)) and (min-width : map-get($breakpoint, lt_L_Max)) { @content; }
   }
 }
+
+@mixin scrollbar($color) {
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    border-radius: 10px;
+  }
+}

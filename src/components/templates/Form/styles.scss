@@ -36,4 +36,6 @@
   margin: 25px 0 0;
   padding: 20px;
   overflow-y: auto;
+
+  @include scrollbar(#b7cdc1);
 }
