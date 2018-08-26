@@ -25,9 +25,9 @@ export const sagas = {
         yield put(asyncSuccess());
         yield put(push('/thanks'));
       } else if (error) {
-        yield put(asyncFailed());
-        yield put(push('/thanks'));
         console.log(error);
+        const { body } = error;
+        yield put(asyncFailed(body.message));
       }
     } catch (err) {
       yield put(asyncFailed());

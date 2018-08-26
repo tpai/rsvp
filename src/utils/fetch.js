@@ -11,7 +11,7 @@ const myFetch = async (url, options = {}) => {
   };
   const response = await fetch(url, newOptions);
   if (response.status >= 500) throw new Error(response);
-  const body   = await response.text();
+  const body   = await response.json();
   const result = {
     body,
     status:     response.status,

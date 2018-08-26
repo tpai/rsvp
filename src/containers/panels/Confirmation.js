@@ -8,6 +8,7 @@ import { clickSend } from 'sagas/confirmation';
 function mapStateToProps(state) {
   return {
     uiState: state.ui.state,
+    uiError: state.ui.error,
     rsvp: state.rsvp,
     rsvpCompany: state.rsvpCompany,
   };

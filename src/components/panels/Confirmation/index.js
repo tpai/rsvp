@@ -10,6 +10,7 @@ import styles from './styles.scss';
 class Confirmation extends PureComponent {
   static propTypes = {
     uiState: PropTypes.oneOf(['idle', 'loading', 'failed']),
+    uiError: PropTypes.string,
     rsvp: PropTypes.shape({
       name: PropTypes.string,
       nickname: PropTypes.string,
@@ -29,6 +30,7 @@ class Confirmation extends PureComponent {
   }
   static defaultProps = {
     uiState: 'idle',
+    uiError: '',
     rsvp: {
       name: '',
       nickname: '',
@@ -85,7 +87,7 @@ class Confirmation extends PureComponent {
   }
   render() {
     const { isVerified, response } = this.state;
-    const { uiState, clickSend, clickModify } = this.props;
+    const { uiState, uiError, clickSend, clickModify } = this.props;
     const labels = {
       name: '姓名',
       nickname: '暱稱',
@@ -117,6 +119,11 @@ class Confirmation extends PureComponent {
             >
               送出
             </Button>
+            {uiState === 'failed' &&
+              <div className={styles['error']}>
+                {uiError}
+              </div>
+            }
           </div>
         )}
       >
