@@ -1,3 +1,5 @@
+/* global FastClick */
+
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
@@ -50,3 +52,13 @@ render(
   </Provider>,
   document.getElementById('app'),
 );
+
+if ('addEventListener' in document) {
+  document.addEventListener('DOMContentLoaded', () => {
+    FastClick.attach(document.body);
+  }, false);
+
+  document.addEventListener('gesturestart', (e) => {
+    e.preventDefault();
+  });
+}
