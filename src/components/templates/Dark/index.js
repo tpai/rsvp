@@ -13,15 +13,17 @@ class Dark extends PureComponent {
 
     // next button
     onClick: PropTypes.func,
+
     children: PropTypes.any,
   }
   static defaultProps = {
     disableSpace: false,
     // multiple buttons
-    buttons: null,
+    buttonGroup: null,
 
     // next button
     onClick: () => {},
+
     children: null,
   }
   render () {
