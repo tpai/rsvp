@@ -1,9 +1,12 @@
+@import '~stylesheets/base';
+
 .default {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   height: 100%;
+  margin: -50px 0 0;
 }
 
 .logo > svg {
@@ -34,4 +37,8 @@
 
 .sign {
   width: 84px;
+}
+
+.next {
+  @extend %general-next;
 }

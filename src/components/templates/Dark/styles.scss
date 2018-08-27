@@ -14,6 +14,12 @@
     height: $laptop-height;
   }
 
+  @include rwd(tablet) {
+    border-radius: 5px;
+    width: $laptop-width;
+    height: $laptop-height;
+  }
+
   @include rwd(mobile) {
     position: absolute;
     top: 0;
@@ -23,9 +29,17 @@
   }
 }
 
+.space {
+  @extend %general-space;
+}
+
 .description {
   @extend %general-description;
   color: #b7cdc1;
   width: 100%;
   text-align: left;
+}
+
+.next {
+  @extend %general-next;
 }

@@ -18,11 +18,23 @@ class Invitation extends PureComponent {
     this.props.nextPage();
   }
   handleClickNavigate = () => {
-    window.open('https://goo.gl/maps/pgJuEQ3ALCk');
+    location.assign('https://goo.gl/maps/pgJuEQ3ALCk');
   }
   render () {
     return (
-      <Plain onClick={this.handleClickNext}>
+      <Plain
+        buttonGroup={(
+          <div className={styles['next']}>
+            <Button
+              styleTypes={["icon-right", "primary"]}
+              iconType="arrow-right"
+              onClick={this.handleClickNext}
+            >
+              填寫出席表單
+            </Button>
+          </div>
+        )}
+      >
         <div className={styles['invitation']}>
           <div className={styles['frame']}>
             <div className={styles['top']}>

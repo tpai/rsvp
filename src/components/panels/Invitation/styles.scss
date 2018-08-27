@@ -1,3 +1,5 @@
+@import '~stylesheets/base';
+
 .invitation {
   width: 328px;
   height: 408px;
@@ -28,6 +30,10 @@
 
   width: 90%;
   margin-top: 20px;
+
+  @include rwd(both) {
+    margin-top: 10px;
+  }
 }
 
 .middle {
@@ -37,7 +43,7 @@
   justify-content: space-around;
 
   width: 100%;
-  margin-top: 27px;
+  margin-top: 20px;
 }
 
 .bottom {
@@ -47,7 +53,7 @@
   justify-content: space-around;
 
   width: 100%;
-  margin-top: 17px;
+  margin-top: 20px;
 }
 
 .name {
@@ -68,18 +74,21 @@
 
 .title {
   color: #697851;
-  font-size: 16px;
+  font-family: 'EB Garamond';
+  font-size: 20px;
   font-weight: bold;
 }
 
 .divider {
   width: 70%;
   border: .5px dashed #e54c51;
+  margin: 2px;
 }
 
 .date {
   color: #e54c51;
-  font-size: 24px;
+  font-family: 'EB Garamond';
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -95,4 +104,8 @@
 
 .button {
   margin-top: 13px;
+}
+
+.next {
+  @extend %general-next;
 }

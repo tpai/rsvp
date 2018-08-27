@@ -1,9 +1,15 @@
+%general-space {
+  flex: 1;
+}
+
 %general-description {
+  flex: 7;
   font-size: 14px;
-  font-weight: 300;
   line-height: 1.71;
   color: #697851;
-  height: 450px;
   text-align: center;
-  margin: 0 0 67px;
+}
+
+%general-next {
+  flex: 1;
 }

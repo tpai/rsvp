@@ -6,9 +6,16 @@
   align-items: center;
   justify-content: flex-start;
 
-  background: #545d4a url('images/bg-leaf.png') repeat center center fixed;
+  background: #545d4a url('images/bg-leaf.png') repeat center center;
+  background-size: cover;
 
   @include rwd(laptop) {
+    border-radius: 5px;
+    width: $laptop-width;
+    height: $laptop-height;
+  }
+
+  @include rwd(tablet) {
     border-radius: 5px;
     width: $laptop-width;
     height: $laptop-height;
@@ -25,6 +32,13 @@
 
 .title {
   margin: 37px 0 0;
+
+  @include rwd(both) {
+    margin: 10px 0 0;
+    > svg {
+      width: 100px;
+    }
+  }
 }
 
 .content {
@@ -33,9 +47,13 @@
   background: #fff;
   font-size: 14px;
   color: #697851;
-  margin: 25px 0 0;
-  padding: 20px;
+  margin: 5px 0 0;
+  padding: 20px 20px 0 20px;
   overflow-y: auto;
 
   @include scrollbar(#b7cdc1);
+
+  @include rwd(both) {
+    height: calc(100% - 120px);
+  }
 }

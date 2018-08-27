@@ -9,7 +9,7 @@ import styles from './styles.scss';
 class Thanks extends PureComponent {
   render() {
     return (
-      <Dark buttonGroup={(<div>&nbsp;</div>)}>
+      <Dark buttonGroup={(<div className={styles['next']}>&nbsp;</div>)}>
         <div className={styles['default']}>
           <div className={styles['logo']} dangerouslySetInnerHTML={{__html: logo}} />
           <div className={styles['content']}>

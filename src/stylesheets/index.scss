@@ -1,7 +1,12 @@
+@import '~stylesheets/base';
+
 :global {
   * {
     -webkit-tap-highlight-color: transparent;
     font-family: "Noto Sans TC", "EB Garamond";
+  }
+  html {
+    -webkit-text-size-adjust: none;
   }
   html body p {
     margin: 0;
@@ -18,11 +23,26 @@
     align-items: center;
     justify-content: center;
 
+    @include rwd(laptop) {
+      background: #f2f2f2;
+    }
+
+    @include rwd(tablet) {
+      background: #f2f2f2;
+    }
+  }
+
   .transition-wrapper {
     @include rwd(laptop) {
       position: relative;
-      width: $laptop-width;
-      height: $laptop-height;
+      width: 405px;
+      height: 697px;
+    }
+
+    @include rwd(tablet) {
+      position: relative;
+      width: 405px;
+      height: 697px;
     }
 
     @include rwd(mobile) {
@@ -36,25 +56,49 @@
 
   .transition-item {
     position: absolute;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform .3s, opacity .3s;
 
     &.transition-appear {
-      opacity: 0;
-      transform: translate3d(30%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+
+      @include rwd(laptop) {
+        opacity: 0;
+      }
+      @include rwd(tablet) {
+        opacity: 0;
+      }
     }
 
     &.transition-appear.transition-appear-active {
-      opacity: 1;
       transform: translate3d(0, 0, 0);
+
+      @include rwd(laptop) {
+        opacity: 1;
+      }
+      @include rwd(tablet) {
+        opacity: 1;
+      }
     }
     &.transition-leave {
-      opacity: 1;
       transform: translate3d(0, 0, 0);
+
+      @include rwd(laptop) {
+        opacity: 1;
+      }
+      @include rwd(tablet) {
+        opacity: 1;
+      }
     }
 
     &.transition-leave.transition-leave-active {
-      opacity: 0;
-      transform: translate3d(-30%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+
+      @include rwd(laptop) {
+        opacity: 0;
+      }
+      @include rwd(tablet) {
+        opacity: 0;
+      }
     }
   }
 }

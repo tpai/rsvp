@@ -18,6 +18,7 @@ class Intro extends PureComponent {
     const { onClick, children } = this.props;
     return (
       <div className={cx(styles['default'], 'transition-item')}>
+        <div className={styles['space']}>&nbsp;</div>
         <div className={styles['description']}>
           {children}
         </div>

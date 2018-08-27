@@ -1,4 +1,10 @@
+@import '~stylesheets/base';
+
 .text {
   text-align: center;
-  line-height: 21px;
+  line-height: 19px;
+
+  @include rwd(both) {
+    line-height: 17px;
+  }
 }

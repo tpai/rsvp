@@ -22,12 +22,14 @@ class GettingMarried extends PureComponent {
         <div className={styles['default']}>
           <img src={us} className={styles['us']} />
           <div className={styles['getting-married']} dangerouslySetInnerHTML={{__html: gettingMarried}} />
-          <p className={styles['text']}>
-            #虎與龍的放閃日記
-          </p>
-          <p className={styles['text']}>
-            迎來最終章？
-          </p>
+          <div className={styles['text-block']}>
+            <p className={styles['text']}>
+              #虎與龍的放閃日記
+            </p>
+            <p className={styles['text']}>
+              迎來最終章？
+            </p>
+          </div>
         </div>
       </Dark>
     );

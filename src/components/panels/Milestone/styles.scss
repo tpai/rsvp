@@ -13,7 +13,7 @@
 .avatar {
   width: 100%;
 
-  @include rwd(mobile) {
+  @include rwd(both) {
     width: 90%;
   }
 }
@@ -27,7 +27,7 @@
 
   line-height: 1.7;
 
-  @include rwd(mobile) {
+  @include rwd(both) {
     line-height: 1.5;
   }
 }

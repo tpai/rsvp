@@ -1,3 +1,5 @@
+@import '~stylesheets/base';
+
 .default {
   display: flex;
 }
@@ -32,7 +34,6 @@
   -webkit-appearance: none;
 
   &:checked,
-  &:not(:disabled):hover,
   &:active:not(:disabled) {
     border: 1px solid #697851;
   }
@@ -88,10 +89,14 @@
     color: #697851;
     content: '\2713';
     font-size: 22px;
-    font-weight: 300;
     position: absolute;
     top: -8px;
     left: -1px;
+
+    @include rwd(both) {
+      top: -12px;
+      left: -5px;
+    }
   }
 }
 

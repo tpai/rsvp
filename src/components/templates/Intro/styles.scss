@@ -6,9 +6,17 @@
   align-items: center;
   justify-content: center;
 
-  background: #e9f0ed;
+  background: #e9f0ed url('images/bg-leaf.png') repeat center center;
+  background-size: cover;
 
   @include rwd(laptop) {
+    border: 15px solid #fff;
+    border-radius: 5px;
+    width: $laptop-width;
+    height: $laptop-height;
+  }
+
+  @include rwd(tablet) {
     border-radius: 5px;
     width: $laptop-width;
     height: $laptop-height;
@@ -23,6 +31,14 @@
   }
 }
 
+.space {
+  @extend %general-space;
+}
+
 .description {
   @extend %general-description;
+}
+
+.next {
+  @extend %general-next;
 }

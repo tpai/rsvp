@@ -15,13 +15,13 @@
 }
 
 .input {
-  font-size: 12px;
+  font-size: 14px;
   color: #545d4a;
   border: 0;
   padding: 0;
   outline: none;
   width: calc(100% - 24px);
-  padding: 12px;
+  padding: 8px 12px;
 
   &::placeholder {
     color: #cfcfcf;

@@ -5,11 +5,13 @@
   padding: 0;
   margin: 0;
   cursor: pointer;
+  height: 100%;
 }
 
 .regular {
   border-radius: 100px;
   padding: 5px 20px;
+  height: 28px;
 }
 
 .wrapper {
@@ -104,7 +106,7 @@
 }
 
 .icon-left, .icon-right {
-  width: 107px;
+  min-width: 107px;
   height: 28px;
 }
 

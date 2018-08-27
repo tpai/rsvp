@@ -27,7 +27,7 @@ class Groom extends PureComponent {
 Handwritten Font  設計師的浪漫
 
 2015 . 10 . 01  我們在前公司相識
-2018 . 10 . 01  決定攜手共度一生
+2018 . 10 . 01  丟係咱結婚紀念日
 
 龍與虎的展覽
 1001 Milestone`}}
