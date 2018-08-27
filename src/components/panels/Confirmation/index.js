@@ -56,7 +56,7 @@ class Confirmation extends PureComponent {
     });
   }
   renderRequirements = (requirements) => {
-    return requirements.map(requirement => `(${requirement === 'vegetarian' ? '素食' : requirement === 'kid' ? '兒童' : ''}) `);
+    return requirements.map(requirement => `(${requirement === 'vegetarian' ? '素食' : requirement === 'kid' ? '兒童' : ''})`);
   }
   renderValues = (label) => {
     const { rsvp, rsvpCompany } =this.props;
@@ -64,10 +64,10 @@ class Confirmation extends PureComponent {
     case 'name':
       return `${rsvp[label]}${rsvp['requirements'] ? this.renderRequirements(rsvp['requirements']) : ''}`;
     case 'companies':
-      return rsvpCompany.companies.map(company => {
+      return rsvpCompany.companies.map((company, key) => {
         if (company) {
           const { name, requirements } = company;
-          return `${name}${requirements? this.renderRequirements(requirements) : ' '}`;
+          return `${key+1}. ${name}${requirements ? ` ${this.renderRequirements(requirements).join('')}` : ' '}\n`;
         }
         return '';
       });
