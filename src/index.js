@@ -53,6 +53,7 @@ render(
   document.getElementById('app'),
 );
 
+// disable hand gestures
 if ('addEventListener' in document) {
   document.addEventListener('DOMContentLoaded', () => {
     FastClick.attach(document.body);
