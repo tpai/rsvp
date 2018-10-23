@@ -12,8 +12,8 @@
     @include rwd(tablet) { @content; };
   }
   @else {
-    @media (min-width : map-get($breakpoint, lt_Min)) and (min-width : map-get($breakpoint, lt_Max)) { @content; }
-    @media (min-width : map-get($breakpoint, lt_L_Min)) and (min-width : map-get($breakpoint, lt_L_Max)) { @content; }
+    @media (min-width : map-get($breakpoint, lt_Min)) and (max-width : map-get($breakpoint, lt_Max)) { @content; }
+    @media (min-width : map-get($breakpoint, lt_L_Min)) and (max-width : map-get($breakpoint, lt_L_Max)) { @content; }
   }
 }
 
